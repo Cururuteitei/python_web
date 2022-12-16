@@ -1,0 +1,15 @@
+{% extends "tasks/layout.html" %}
+{% load static %}
+
+        {% block body %}
+        <h1>Add Task:</h1>
+        <form action="" method="post">
+            {% csrf_token %}
+            <input type="hidden" name="csrfmiddlewaretokens" value="">
+            {{ form }}
+            <input type="submit">
+        </form>
+        <a href="/tasks/">View Tasks</a>
+        {% endblock %}
+  
+
